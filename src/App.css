@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+*{
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10% auto;
+  width: 40%;
+  background-color: #fef2e4;
+  padding: 5px;
+  border-radius: 5px;
+}
+.userList{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  width: 100%;
+  height: 500px;
+  border-bottom: 2px solid rgb(39, 39, 39);
+}
+
+.button{
+  color: #fef2e4;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px 0px;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #b6452c;
+  transition: 0.5s;
+}
+.button:hover{
+  transform: scale(1.05);
+}
+.Card{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  border-radius: 5px;
+  margin: 10px auto;
+  background-color: #b6452c;
+}
+
+.avatar{
+  margin-left: 15px;
+
+}
+.info{
+  font-size: 18px;
+  color: #fef2e4;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 5px 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.Preloader{
+  margin: 35% auto;
+  border: 10px solid #b6452c;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border-left: 10px solid rgb(0, 0, 0);
+  animation: load 0.5s infinite linear;
 }
+.Prev{
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35%;
+}
+@keyframes load {
+  100% {transform: rotate(360deg);}
+}
+@media(max-width:1300px){
+  .wrapper{
+    width: 50%;
+  }
+}
+  @media(max-width:720px){
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .wrapper{
+      padding: 0px;
+      width: 95%;
+    }
+    .info{
+      font-size: 16px;
+    }
+    .avatar{
+      margin-left: 0px;
+    }
 }

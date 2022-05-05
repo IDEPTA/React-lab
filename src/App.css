@@ -84,15 +84,22 @@
   }
 }
   @media(max-width:720px){
-
+    .userList{
+      overflow-x: hidden;
+    }
     .wrapper{
       padding: 0px;
-      width: 95%;
+      width: 100%;
     }
     .info{
       font-size: 16px;
+      margin: 5px;
+    }
+    .Card{
+      width: 97%;
     }
     .avatar{
-      margin-left: 0px;
+      border-radius: 5px 0px 0px 5px;
+      margin: 0px;
     }
 }
